@@ -1,0 +1,18 @@
+ @use "../../utitlities/variables" as *;
+ @use "../../utitlities/mixins" as *;
+
+.nav{
+    background-color: $yellow;
+    padding: 2em 0;
+    text-align: center;
+    &__container{
+        @include flex(space-between,center);
+        &__logo{
+            width: 10%;
+        }
+        &__title{
+            width: 90%;
+            font-size: 1.5rem;;
+        }
+    }
+   }
