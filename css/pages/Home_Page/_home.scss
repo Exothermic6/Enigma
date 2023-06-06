@@ -1,0 +1,23 @@
+@use "../../utitlities/mixins" as *;
+@use "../../utitlities/variables" as *;
+
+.hero{
+    &__container{
+        width: 60%;
+        margin: 0 auto;
+        font-size: 1.5rem;
+        padding: 3em 0;
+    }
+}
+
+.start{
+    text-align: center;
+    font-size: 1.5rem;
+    p{
+        margin: 1em 0;
+    }
+    button{
+        @include btn($white,$blue);
+        width: 20%;
+    }
+}

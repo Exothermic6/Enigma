@@ -32,3 +32,26 @@ a {
   width: 90%;
   font-size: 1.5rem;
 }
+
+.hero__container {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 3em 0;
+}
+
+.start {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.start p {
+  margin: 1em 0;
+}
+.start button {
+  padding: 1.5em;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #19A7CE;
+  width: 20%;
+}
