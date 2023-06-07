@@ -1,1 +1,27 @@
 
+@use "../../utitlities/variables" as *;
+
+.results {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 3rem;
+  &__pie {
+    width: 25%;
+    margin: 0 auto;
+    height: 40vh;
+    border: 2px solid black;
+    margin-top: 2em;
+  }
+  &__form {
+    background-color: aqua;
+    p{
+        font-size: 2rem;
+    }
+    form {
+      @include flex(space-between, center, column);
+      input:text-area{
+        height: 20vh;
+      }
+    }
+  }
+}
