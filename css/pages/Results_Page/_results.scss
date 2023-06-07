@@ -1,9 +1,18 @@
 
 @use "../../utitlities/variables" as *;
+@use "../../utitlities/mixins" as  *;
 
+.result{
+    background-image:  linear-gradient(rgba(255,255,255,0.8),rgba(0,0,0,0.3)),url("../../../images/bg\ d.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 110vh;
+
+}
 .results {
   text-align: center;
-  margin-top: 3em;
+  padding-top: 1em;
   font-size: 3rem;
   &__pie {
     width: 25%;
@@ -13,14 +22,30 @@
     margin-top: 2em;
   }
   &__form {
-    background-color: aqua;
+    text-align: center;
+    margin-top: 3em;
     p{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        color: $white;
+        padding: 1em 0;
     }
     form {
-      @include flex(space-between, center, column);
-      input:text-area{
-        height: 20vh;
+      @include flex(space-between, center,column);
+      gap: 1em;
+      input{
+        padding: 0 2em;
+        width: 30%; 
+        height: 10vh;
+        outline: none;
+        border-radius: 10px;
+        border: none;
+        font-size: 1.2rem;
+      }
+      button{
+        @include btn($white,$blue);
+        font-size: 1.5rem;
+        width: 20%;
+        border-radius: 20px;
       }
     }
   }

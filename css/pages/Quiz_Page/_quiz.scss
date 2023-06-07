@@ -1,8 +1,14 @@
 @use "../../utitlities/mixins" as *;
 @use "../../utitlities/variables" as *;
 
+
 .quiz{
-    margin-top: 8em;
+    background-image:  linear-gradient(rgba(255,255,255,0.8),rgba(0,0,0,0.3)),url("../../../images/bg\ d.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3em;
+    height: 84.6vh;
     &__major{
         @include flex(center,center);
         background-color: $sky;
@@ -43,9 +49,24 @@
             }
             &--c{
                 background-color: hotpink;
+                margin: 1em 6em;
             }
             &--d{
                 background-color: peru;
+                margin: 1em 6em;
+
+            }
+        }
+        &__next{
+            @include flex(center,center);
+            text-align: center;
+            background-color: aqua;
+            width: 8%;
+            margin: 0 auto;
+            height: 8vh;
+            border-radius: 50%;
+            i{
+                width: 10%;
             }
         }
     }
