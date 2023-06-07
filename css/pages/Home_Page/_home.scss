@@ -19,5 +19,6 @@
     button{
         @include btn($white,$blue);
         width: 20%;
+        border-radius: 50px;
     }
 }
