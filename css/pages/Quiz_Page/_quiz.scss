@@ -1,0 +1,52 @@
+@use "../../utitlities/mixins" as *;
+@use "../../utitlities/variables" as *;
+
+.quiz{
+    margin-top: 8em;
+    &__major{
+        @include flex(center,center);
+        background-color: $sky;
+        width: 90%;
+        margin: 0 auto;
+        height: 40vh;
+        border-radius: 50px;
+        p{
+            text-align: center;
+          font-size: 2rem;
+          width: 60%
+        }
+    }
+    &__container{
+      @include flex(space-between,center);
+        &__top,&__bottom{
+            @include flex(space-between,center);
+            margin: 0 6em;
+            gap: 3em;
+            width: 90%;
+            margin: 0 auto;
+            &--a,&--b,&--c,&--d{
+                padding: 1em 0;
+                font-size: 1.5rem;
+                width: 30%;
+                background-color: grey;
+                border-radius: 50px;
+                margin: 1em 4em;
+                text-align: center;
+            }
+            &--a{
+                background-color: aqua;
+                margin-top: 2.3em;
+            }
+            &--b{
+                background-color: chartreuse;
+                margin-top: 2.3em;
+            }
+            &--c{
+                background-color: hotpink;
+            }
+            &--d{
+                background-color: peru;
+            }
+        }
+    }
+}
