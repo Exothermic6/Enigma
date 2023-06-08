@@ -70,4 +70,10 @@
             }
         }
     }
+
+    button{
+        @include btn(black,$yellow);
+        font-size: 1.2rem;
+        display: none;
+        }
 }
