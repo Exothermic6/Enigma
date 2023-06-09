@@ -34,28 +34,28 @@
                 padding: 1em 0;
                 font-size: 1.5rem;
                 width: 30%;
-                background-color: grey;
                 border-radius: 50px;
                 margin: 1em 4em;
                 text-align: center;
             }
             &--a{
-                background-color: aqua;
+                background-color:$yellow ;
                 margin-top: 2.3em;
             }
             &--b{
-                background-color: chartreuse;
+                background-color: $yellow;
                 margin-top: 2.3em;
             }
             &--c{
-                background-color: hotpink;
+                background-color:$yellow;
                 margin: 1em 6em;
             }
             &--d{
-                background-color: peru;
+                background-color: $yellow;
                 margin: 1em 6em;
 
             }
+            
         }
         &__next{
             @include flex(center,center);
@@ -77,3 +77,4 @@
         display: none;
         }
 }
+

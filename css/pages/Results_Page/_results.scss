@@ -14,32 +14,15 @@
   text-align: center;
   padding-top: 1em;
   font-size: 3rem;
-  }
-  &__form {
+  &__img{
     text-align: center;
     margin-top: 3em;
-    p{
-        font-size: 1.5rem;
-        color: $white;
-        padding: 1em 0;
-    }
-    form {
-      @include flex(space-between, center,column);
-      gap: 1em;
-      input{
-        padding: 0 2em;
-        width: 30%; 
-        height: 10vh;
-        outline: none;
-        border-radius: 10px;
-        border: none;
-        font-size: 1.2rem;
-      }
-      button{
-        @include btn($white,$blue);
-        font-size: 1.5rem;
-        width: 20%;
-        border-radius: 20px;
-      }
+    img{
+        border-radius: 50%;
+        box-shadow: 2p 2px solid grey;
+        border: 2px solid $yellow;
     }
   }
+  }
+
+

@@ -18,7 +18,7 @@ const questions = [
     B: "ten pounds of bricks",
     C: "they weigh the same",
     D: "none of the above",
-    correct: "C. they weigh the same",
+    correct: "they weigh the same",
   },
   {
     question:
@@ -27,15 +27,15 @@ const questions = [
     B: "two",
     C: "none",
     D: "four",
-    correct: "D. four",
+    correct: "four",
   },
   {
-    question: "How many mpnths have 28 days ?",
+    question: "How many months have 28 days ?",
     A: "one",
     B: "february",
     C: "none of the months",
     D: "all twelve months",
-    correct: "D. all twelve months",
+    correct: "all twelve months",
   },
   {
     question:
@@ -44,7 +44,7 @@ const questions = [
     B: "country",
     C: "map",
     D: "globe",
-    correct: "C. map",
+    correct: "map",
   },
   {
     question: " You have a bee in your hand. What's in your eye ?",
@@ -52,7 +52,7 @@ const questions = [
     B: "beauty",
     c: "focus",
     D: "vision",
-    correct: "D. vision",
+    correct: "vision",
   },
 ];
 
@@ -61,35 +61,77 @@ let currentIndex = 0;
 let currentQuestion = questions[currentIndex];
 
 const loadQuestions = () => {
-  p.innerHTML = `
+
+    // const container = document.createElement("div");
+    // container.setAttribute("class", "container");
+    // const quizMajor = document.createElement("div");
+    // quizMajor.setAttribute("class", "quiz__major");
+    // container.appendChild(quizMajor);
+    // const quizP = document.createElement("p");
+    // quizP.textContent = currentQuestion.question;
+    // quizMajor.appendChild(quizP);
+    // const quizContainerTop=document.createElement("div");
+    // quizContainerTop.setAttribute("class","quiz__container__top--a choice")
+    // quizContainerTop.textContent = currentQuestion.A;
+
+    // container.appendChild(quizContainerTop)
+    // quizContainerTop.setAttribute("class","quiz__container__top--a choice")
+    // const quizContainerTopA=document.createElement("div")
+    // quizContainerTop.textContent = currentQuestion.A;
+    // quizContainerTop.appendChild(quizContainerTopA);
+    // const quizContainerTopB=document.createElement("div")
+    // quizContainerTopB.setAttribute("class","quiz__container__top--b choice")
+    // quizContainerTopB.textContent = currentQuestion.B;
+    // quizContainerTop.appendChild(quizContainerTopB);
+
+
+
+    // const quizContainer=document.createElement("div");
+    // container.appendChild(quizContainer)
+
+    // const quizContainerTopC=document.createElement("div")
+    // quizContainerTopC.setAttribute("class","quiz__container__top--c choice")
+    // quizContainerTopC.textContent = currentQuestion.C;
+    // quizContainer.appendChild(quizContainerTopC);
+    // const quizContainerTopD=document.createElement("div")
+    // quizContainerTopD.setAttribute("class","quiz__container__top--d choice")
+    // quizContainerTopD.textContent = currentQuestion.D;
+    // quizContainer.appendChild(quizContainerTopD);
+
+
+
+
+
+    p.innerHTML = `
     <div class="container">
     <div class="quiz__major">
-        <p>${currentQuestion.question}</p>
+    <p>${currentQuestion.question}</p>
     </div>
-        <div class="quiz__container__top">
-            <div class="quiz__container__top--a choice">A. ${currentQuestion.A}</div>
-            <div class="quiz__container__top--b  choice">B. ${currentQuestion.B}</div>
-        </div>
-        <div class="quiz__container">
-            <div class="quiz__container__top--c  choice">C. ${currentQuestion.C}</div>
-            <div class="quiz__container__top--d  choice">D. ${currentQuestion.D}</div>
-        </div>
-  </div>
+    <div class="quiz__container__top">
+    <div class="quiz__container__top--a choice">A. ${currentQuestion.A}</div>
+    <div class="quiz__container__top--b  choice">B. ${currentQuestion.B}</div>
+    </div>
+    <div class="quiz__container">
+    <div class="quiz__container__top--c  choice">C. ${currentQuestion.C}</div>
+    <div class="quiz__container__top--d  choice">D. ${currentQuestion.D}</div>
+    </div>
+    </div>   
     `;
-
-  quest.appendChild(p);
+    
+    quest.appendChild(p);
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  loadQuestions();
-  const choices = document.querySelectorAll(".choice");
-
+    loadQuestions();
+    
+    const choices = document.querySelectorAll(".choice");
   const btn = document.querySelector(".button i");
   const quest = document.getElementById("quest");
   console.log(quest);
 
   btn.addEventListener("click", function (e) {
     currentIndex += 1;
+    choices.forEach(choice=>console.log(choice.textContent))
     currentQuestion = questions[currentIndex];
     if (currentIndex <= 5) {
       console.log(currentQuestion);
@@ -104,21 +146,21 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
   });
-
   // Loop over choices
-const correctAnswer=questions[0].correct;
+const correctAnswer=questions[currentIndex].correct;
 console.log(correctAnswer)
 
   choices.forEach(choice=>{
       choice.addEventListener("click",e=>{
         console.log(e.target.textContent)
         if(e.target.textContent===correctAnswer){
-            e.target.style.backgroundColor="green"
+            e.target.style.backgroundColor="#28ff33"
             e.target.style.border="2px solid black"
         }
         else{
-            e.target.style.backgroundColor="red"
+            e.target.style.backgroundColor="red";
         }
       })
   })
+
 });
